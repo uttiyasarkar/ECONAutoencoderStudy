@@ -156,8 +156,8 @@ dRjetmatched_pd = ak.to_pandas(dRjetmatched)
 mindRjetmatched_pd = ak.to_pandas(mindRjetmatched) 
 
 
-ak4jetmatched = ak.Array(ak4jet[((ak4jet.deltaR(genjetmatched)<0.4) & (ak4jet.pt/genjetmatched.pt>0.5) & (ak4jet.pt/genjetmatched.pt<1.5))])
-genjetmatchedfinal = ak.Array(genjetmatched[((ak4jet.deltaR(genjetmatched)<0.4) & (ak4jet.pt/genjetmatched.pt>0.5) & (ak4jet.pt/genjetmatched.pt<1.5))])
+ak4jetmatched = ak.Array(ak4jet[(ak4jet.deltaR(genjetmatched)<0.4)])
+genjetmatchedfinal = ak.Array(genjetmatched[(ak4jet.deltaR(genjetmatched)<0.4)])
 
 ak4jetmatched_pd = ak.to_pandas(ak4jetmatched)
 genjetmatchedfinal_pd = ak.to_pandas(genjetmatchedfinal)
